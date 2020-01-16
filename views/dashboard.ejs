@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title> Dashboard </title>
+      <% include partials/head %>
+   </head>
+   <body>
+    <% include partials/nav %>
+      <div class="container shadow mt-5 ml-auto mr-auto rounded">
+         <h2> <strong> Dashboard </strong> </h2>
+         <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading"> Hello there, <%= user.name %>! </h4>
+          <p> Welcome to Inspire, a place where you can find and pin quotes that you like. </p>
+          <hr>
+          <p class="mb-0"> To view the source code or contribute to this project, visit <a target="_blank" href="https://github.com/omaralsayed/inspire"><strong>Inspire</strong></a>. </p>
+         </div>
+         <h5 id="title"> <strong> New Quotes </strong> </h5>
+         <p class="mb-0" id="quote"></p> <p class="font-italic" id="author"></p>
+         <button id="next" class="btn"> Next </button>
+         <button id="append" class="btn"> Pin </button>
+         <h5 id="title"> <strong> Pinned Quotes </strong> </h5>
+         <table class="table table-striped table-bordered">
+            <thead><tr>
+                  <th scope="col"> Author </th>
+                  <th scope="col"> Quote </th>
+                  <th scope="col"> </th>
+            </tr></thead>
+            <tbody id="tbody"></tbody>
+         </table>
+      </div>
+   </body>
+   <% include partials/footer %>
+   <script src="../../src/js/script.js"></script>
+</html>

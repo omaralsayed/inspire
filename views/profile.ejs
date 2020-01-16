@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title> Profile </title>
+      <% include partials/head %>
+   </head>
+   <body>
+    <% include partials/nav %>
+        <div class="row mt-4">
+            <div class="col-md-6 m-auto">
+                <div class="card card-body">
+                    <form>
+                        <h2> Profile </h2>
+                        <% include partials/messages %>
+                        <div class="form-group">
+                            <label for="name"> Username </label>
+                            <input readonly type="name" id="name" name="name" class="form-control" value="<%- user.name %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"> Email </label>
+                            <input readonly type="email" id="email" name="email" class="form-control" value="<%- user.email %>">
+                        </div>
+                        <div class="form-group">
+                            <label for="member"> Member since <%- user.date %> </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+   </body>
+   <% include partials/footer %>
+</html>

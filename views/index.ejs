@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title> Sign-in </title>
+      <% include partials/head %>
+   </head>
+   <body>
+      <% include partials/nav %>
+      <form method="post" action="/users/login" autocomplete="off">
+         <div class="row mt-5">
+            <div class="col-md-4 m-auto">
+               <div class="card card-body">
+                  <h2> Inspire </h2>
+                  <p> Login to access thousands of quotes. <br> Pin your favorite ones. <i class="fa fa-star"></i> </p>
+                  <% include ./partials/messages %>
+                  <div class="controls">
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <label> Email </label>
+                              <input type="email" id="email" name="email" class="form-control">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <label> Password </label>
+                              <input type="password" id="password" name="password" class="form-control">
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <input type="submit" class="btn btn-send" value="Login"><br><br>
+                           <label class="lead"> No account? <a href="/users/register"> Register </a></label>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+   </body>
+   <% include partials/footer %>
+</html>

@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Roboto', 'Roboto Slab', 'Ubuntu', sans-serif;
+  background-image: url("../../img/inspire.png");
+  overflow-x: hidden
+}
+
+th {
+  font-weight: 600 !important;
+  text-align: center
+}
+
+a {
+  color: #799bc7
+}
+
+#title {
+  margin-top: 2rem
+}
+
+#tbody {
+  text-align: center
+}
+
+.btn {
+  color: #fff;
+  background-color: #799bc7 !important
+}
+
+.alert.alert-success {
+  margin-top: 2rem
+}
+
+.alert-heading {
+  font-size: 1.25rem;
+  font-weight: 400
+}
+
+.container {
+  background-color: #fff;
+  margin: 5%;
+  padding: 2%
+}
+
+.p-2 {
+  color: #000;
+  font-weight: 400
+}
