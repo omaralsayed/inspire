@@ -25,13 +25,13 @@ a {
   text-align: center
 }
 
+#alert {
+  margin-top: 2rem
+}
+
 .btn {
   color: #fff;
   background-color: #799bc7 !important
-}
-
-.alert.alert-success {
-  margin-top: 2rem
 }
 
 .alert-heading {
