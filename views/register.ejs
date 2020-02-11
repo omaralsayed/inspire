@@ -11,26 +11,25 @@
                 <div class="card card-body">
                     <form action="/users/register" method="post" autocomplete="off">
                         <h2> Create account </h2>
+                        <p> Get access to thousands of quotes. <br> Pin your favorite ones. <i class="fa fa-star"></i> </p>
                         <% include partials/messages %>
                         <div class="form-group">
-                            <label for="name"> Username </label>
-                            <input type="name" id="name" name="name" class="form-control" value="<%= typeof name != 'undefined' ? name : '' %>"/>
+                            <input type="name" id="name" name="name" placeholder="Username" class="form-control" value="<%= typeof name != 'undefined' ? name : '' %>"/>
                         </div>
                         <div class="form-group">
-                            <label for="email"> Email </label>
-                            <input type="email" id="email" name="email" class="form-control" value="<%= typeof email != 'undefined' ? email : '' %>"/>
+                            <input type="email" id="email" name="email" placeholder="Email" class="form-control" value="<%= typeof email != 'undefined' ? email : '' %>"/>
                         </div>
                         <div class="form-group">
-                            <label for="password"> Password </label>
-                            <input type="password" id="password" name="password" class="form-control" placeholder="At least 6 characters" value="<%= typeof password != 'undefined' ? password : '' %>"/>
+                            <input type="password" id="password" name="password" placeholder="Password" class="form-control" placeholder="At least 6 characters" value="<%= typeof password != 'undefined' ? password : '' %>"/>
                         </div>
                         <div class="form-group">
-                            <label for="password2"> Confirm Password </label>
-                            <input type="password" id="password2" name="password2" class="form-control" value="<%= typeof password2 != 'undefined' ? password2 : '' %>"/>
+                            <input type="password" id="password2" name="password2" placeholder="Confirm Password" class="form-control" value="<%= typeof password2 != 'undefined' ? password2 : '' %>"/>
                         </div>
                         <button type="submit" class="btn"> Create account </button>
+                        <a class="btn" id="switch" href="/"> Sign-In </a>
+                        <br><br>
+                        <label><a href="/guest"> Continue as guest </a></label>
                     </form>
-                    <p class="lead mt-4"> Already have an account? <a href="/"> Sign-In </a> </p>
                 </div>
             </div>
         </div>
