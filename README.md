@@ -2,38 +2,44 @@
 
 Inspire is a quote generator that allows you to pin your favorite quotes.
 
-## Prerequisites
+You can do the following:
 
-+  [VS Code](https:https://code.visualstudio.com/)
-+  [Node.js](https://nodejs.org/en/)
-+  [MongoDB](https://www.mongodb.com/)
++ Upload an image to get a relevant quote (image processing + RegEx)
++ Get a random quote from 5000+ quotes (random index algorithm)
 
-## Installing
+Powered with TensorFlow — Google's machine learning runtime.
 
-+ Setup database
-	+ Open a Command Interpreter with Administrative privileges and run:
-		> cd C:\Program Files\MongoDB\Server\4.2\bin
-	+ Start the service
-		> net start MongoDB
-	+ Run MongoDB shell
-		> mongo
-	+ Create a database
-		> use users
-	+ Create a collection
-		> db.createCollection('users')
-	+ Connect to database
-		+ Open config/keys.js
-		+ Set mongoURI to 'mongodb://127.0.0.1/users'
+## Technologies
 
-+ Install dependencies
-	+ Open a Command Interpreter with Administrative privileges and run:
-		> cd path\to\inspire-master
-	+ Install Node.js programs
-		> npm i
++ [Node.js](https://nodejs.org/en/)
++ [MongoDB](https://www.mongodb.com/)
++ [Bootstrap](https://getbootstrap.com/)
 
-## Deployment
+## Supported Platforms
 
-+ Start the server
-	> nodemon app.js
++ MacOS X CPU (10.12.6 Siera or higher)
++ Linux CPU (Ubuntu 14.04 or higher)
++ Linux GPU (Ubuntu 14.04 or higher and Cuda 10.0 w/ CUDNN v7)
++ Windows CPU (Win 7 or higher)
++ Windows GPU (Win 7 or higher and Cuda 10.0 w/ CUDNN v7)
 
-You now have a local copy running on http://127.0.0.1/
+## Quick Start 🚀
+
++ Open a Command Interpreter with Administrative privileges and run:
+
+```sh
+cd /MongoDB/Server/4.2/bin 							    # navigate to bin
+net start MongoDB           							# start the service 
+mongo                       							# run MongoDB shell
+use users												# create a database
+db.createCollection('users')							# create a collection
+git clone https://github.com/omaralsayed/inspire.git    # clone repository
+cd inspire												# navigate to project
+npm i													# install dependencies
+```
+
+## Recommended Resources
+
++ [MobileNet](https://github.com/tensorflow/tfjs-models/tree/master/mobilenet)
++ [EJS templating](https://ejs.co/)
++ [Passport](http://www.passportjs.org/docs/)
