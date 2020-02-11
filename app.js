@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const fileUpload = require('express-fileupload');
 const flash = require('connect-flash');
 const db = require('./config/keys').mongoURI;
 
@@ -13,8 +14,8 @@ const db = require('./config/keys').mongoURI;
 const app = express();
 const port = process.env.port || 80;
 
-// Passport configuration
-require('./config/passport')(passport);
+// Passport implementation
+require('./controllers/user')(passport);
 
 // Connect to MongoDB
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -36,6 +37,12 @@ app.use(session({ secret: 'secret',	resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// File upload middleware
+app.use(fileUpload({	
+	limits: { fileSize: 50 * 1024 * 1024 },
+	preserveExtension: true
+}));
+
 // Connect flash
 app.use(flash());
 
@@ -51,7 +58,7 @@ app.use(function(req, res, next) {
 app.use('/', require('./routes/index.js'));
 app.use('/users', require('./routes/user.js'));
 
-// Listen on port 80
+// Port 80
 app.listen(port, function () {
 	console.log('Listening on port ' + port)
-})
+});
