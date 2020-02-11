@@ -3,7 +3,7 @@ const mobilenet = require('@tensorflow-models/mobilenet');
 const tfnode = require('@tensorflow/tfjs-node');
 const fs = require('fs');
 const router = express.Router();
-const { ensureAuthenticated, forwardAuthenticated } = require('../controllers/index');
+const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 // GET index
 router.get('/', forwardAuthenticated, (req, res) => 
