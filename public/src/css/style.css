@@ -17,7 +17,11 @@ a {
   color: #799bc7
 }
 
-#title {
+#title-gen {
+  margin-top: 2rem
+}
+
+#title-pin {
   margin-top: 2rem
 }
 
@@ -27,6 +31,11 @@ a {
 
 #alert {
   margin-top: 2rem
+}
+
+#switch {
+  color: #fff;
+  background-color: #808080 !important
 }
 
 .btn {
