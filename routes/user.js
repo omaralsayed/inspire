@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
-const User = require('../models/User');
-const { forwardAuthenticated } = require('../config/auth');
+const User = require('../models/user');
+const { forwardAuthenticated } = require('../controllers/index');
 
 // GET register
 router.get('/register', forwardAuthenticated, (req, res) => 
