@@ -56,3 +56,6 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 *.lnk
+
+# Temp files
+media/temp.*
