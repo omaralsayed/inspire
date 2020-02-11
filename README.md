@@ -28,14 +28,14 @@ Powered with TensorFlow — Google's machine learning runtime.
 + Open a Command Interpreter with Administrative privileges and run:
 
 ```sh
-cd /MongoDB/Server/4.2/bin 							    # navigate to bin
-net start MongoDB           							# start the service 
-mongo                       							# run MongoDB shell
-use users												# create a database
-db.createCollection('users')							# create a collection
-git clone https://github.com/omaralsayed/inspire.git    # clone repository
-cd inspire												# navigate to project
-npm i													# install dependencies
+cd /MongoDB/Server/4.2/bin # navigate to bin
+net start MongoDB # start the service 
+mongo # run MongoDB shell
+use users # create a database
+db.createCollection('users') # create a collection
+git clone https://github.com/omaralsayed/inspire.git # clone repository
+cd inspire # navigate to project
+npm i # install dependencies
 ```
 
 ## Recommended Resources
