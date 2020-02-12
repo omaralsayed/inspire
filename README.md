@@ -7,7 +7,25 @@ You can do the following:
 + Upload an image to get a relevant quote (image processing + RegEx)
 + Get a random quote from 5000+ quotes (random index algorithm)
 
-Powered with TensorFlow — Google's machine learning runtime.
+Powered by TensorFlow — Google's end-to-end open source platform for machine learning.
+
+## Demo 🤓
+
+Sign In Form
+
+![Sign In](media/signin.png)
+
+Registration Form
+
+![Registration](media/register.png)
+
+Dashboard Image Upload
+
+![Pre](media/default.png)
+
+Image Classification Results
+
+![Post](media/probability.png)
 
 ## Technologies
 
@@ -15,7 +33,7 @@ Powered with TensorFlow — Google's machine learning runtime.
 + [MongoDB](https://www.mongodb.com/)
 + [Bootstrap](https://getbootstrap.com/)
 
-## Supported Platforms
+## Supported Platforms 
 
 + MacOS X CPU (10.12.6 Siera or higher)
 + Linux CPU (Ubuntu 14.04 or higher)
@@ -25,7 +43,7 @@ Powered with TensorFlow — Google's machine learning runtime.
 
 ## Quick Start 🚀
 
-+ Open a Command Interpreter with Administrative privileges and run:
+Open a Command Interpreter with Administrative privileges and run:
 
 ```sh
 cd /MongoDB/Server/4.2/bin # navigate to bin
@@ -36,6 +54,7 @@ db.createCollection('users') # create a collection
 git clone https://github.com/omaralsayed/inspire.git # clone repository
 cd inspire # navigate to project
 npm i # install dependencies
+nodemon app.js # deploy on http://127.1.0.1/
 ```
 
 ## Recommended Resources
