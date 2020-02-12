@@ -21,11 +21,11 @@ Registration Form
 
 Dashboard Image Upload
 
-<img src="media/default.png" alt="Pre" width="350">
+<img src="media/default.png" alt="Pre" width="450">
 
 Image Classification Results
 
-<img src="media/probability.png" alt="Post" width="350">
+<img src="media/probability.png" alt="Post" width="450">
 
 ## Technologies
 
