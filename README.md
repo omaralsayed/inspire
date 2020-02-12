@@ -9,29 +9,35 @@ You can do the following:
 
 Powered by TensorFlow — Google's end-to-end open source platform for machine learning.
 
-## Demo 🤓
+## Key Features 🤓
 
 **Registration Form**
 
-<img src="media/register.png" alt="Registration" width="350">
+*Registration is optional. You can continue as guest.*
+
+<img src="media/register.png" alt="Registration" width="300">
 
 **Sign In Form**
 
-<img src="media/signin.png" alt="Sign In" width="350">
+*Sign in is optional. You can continue as guest.*
+
+<img src="media/signin.png" alt="Sign In" width="300">
 
 **File Upload Form (Input)**
+
+*Supported image types: BMP, JPEG, JPG, PNG, or GIF.*
 
 <img src="media/pre.png" alt="Pre" width="500">
 
 **Image Classification (Output)**
 
-*Probability is displayed on mouse hover*
+*Probability is displayed on mouse hover.*
 
 <img src="media/post.png" alt="Post" width="500">
 
 **Random Selector**
 
-<img src="media/rand.png" alt="Rand" width="550">
+<img src="media/rand.png" alt="Rand" width="500">
 
 ## Technologies
 
@@ -68,3 +74,7 @@ nodemon app.js # deploy on http://127.1.0.1/
 + [MobileNet](https://github.com/tensorflow/tfjs-models/tree/master/mobilenet)
 + [EJS templating](https://ejs.co/)
 + [Passport](http://www.passportjs.org/docs/)
+
+## License
+
+Licensed under the MIT license.
