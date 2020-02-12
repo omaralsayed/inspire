@@ -21,16 +21,17 @@ Powered by TensorFlow — Google's end-to-end open source platform for machine l
 
 **File Upload Form (Input)**
 
-<img src="media/pre.png" alt="Pre" width="350">
+<img src="media/pre.png" alt="Pre" width="500">
 
 **Image Classification (Output)**
+
 *Probability is displayed on mouse hover*
 
-<img src="media/post.png" alt="Post" width="350">
+<img src="media/post.png" alt="Post" width="500">
 
 **Random Selector**
 
-<img src="media/rand.png" alt="Rand" width="350">
+<img src="media/rand.png" alt="Rand" width="500">
 
 ## Technologies
 
