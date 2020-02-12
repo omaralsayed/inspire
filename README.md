@@ -13,19 +13,19 @@ Powered by TensorFlow — Google's end-to-end open source platform for machine l
 
 Sign In Form
 
-<img src="media/signin.png" alt="Sign In" width="250">
+<img src="media/signin.png" alt="Sign In" width="350">
 
 Registration Form
 
-<img src="media/register.png" alt="Registration" width="250">
+<img src="media/register.png" alt="Registration" width="350">
 
 Dashboard Image Upload
 
-<img src="media/default.png" alt="Pre" width="250">
+<img src="media/default.png" alt="Pre" width="350">
 
 Image Classification Results
 
-<img src="media/probability.png" alt="Post" width="250">
+<img src="media/probability.png" alt="Post" width="350">
 
 ## Technologies
 
