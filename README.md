@@ -31,7 +31,7 @@ Powered by TensorFlow — Google's end-to-end open source platform for machine l
 
 **Random Selector**
 
-<img src="media/rand.png" alt="Rand" width="500">
+<img src="media/rand.png" alt="Rand" width="550">
 
 ## Technologies
 
