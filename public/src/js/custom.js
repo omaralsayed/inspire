@@ -2,21 +2,44 @@
 
 $(document).ready(function() {
     $.getJSON(quotes).done(function(data) {
-    const n = data.length - 1;
-    const tensor = document.getElementById('tf').innerHTML;
+        // A tensor in this context is a stringified JSON object
+        const tensor = document.getElementById('tf').innerText;
 
-    for (let i = 0; i < n; i++) {
-        if (data[i].quoteText.toLowerCase().indexOf(tensor.toLowerCase()) != -1) {
-            quote = data[i].quoteText;
-            author = data[i].quoteAuthor;
-            break;
-        } else {
-            quote = data[i].quoteText;
-            author = data[i].quoteAuthor;
+        // RegEx elimination of '"' and ',' from the data tensor
+        const keywords = tensor.replace(/"|,/g, '').split(' ');
+
+        let match = false;
+        let done = false;
+
+        for (let k = 0; k < keywords.length - 1; k++) {
+            for (let i = 0; i < data.length - 1; i++) {
+                // If a keyword exists in JSON dataset
+                if (data[i].quoteText.toLowerCase().includes(keywords[k].toLowerCase())) {
+                    quote = data[i].quoteText;
+                    author = data[i].quoteAuthor;
+                    done = match = true;
+                    break;
+                    // If a keyword does not exists in JSON dataset 
+                } else {
+                    continue;
+                }
+            }
+            if (done) break;
         }
-    }
 
-    document.getElementById('regex-quote').innerHTML = '"'  + quote + '"';
-    document.getElementById('regex-author').innerHTML = '- ' + author;
+        // Post quote on match establishment
+        if (match) {
+            document.getElementById('regex-quote').innerHTML = '"'  + quote + '"';
+            document.getElementById('regex-author').innerHTML = '- ' + author;
+        } else {
+            document.getElementById('regex-quote').innerHTML = 'Unable to find a good match.';
+            document.getElementById('regex-author').innerHTML = '';
+        }
+
+        // Pre-upload (we do not want to get a match for the placeholder)
+        if (tensor == 'Choose file for predictions') {
+            document.getElementById('regex-quote').innerHTML = 'Choose file for quote';
+            document.getElementById('regex-author').innerHTML = '';
+        }
     });
 });
