@@ -33,14 +33,14 @@
                         </a>
                      <% } %>
                   <% } else { %>
-                     Pending
+                     Choose file for predictions
                   <% } %>
                   </p>
                </p>
                <p class="mb-0">
                <img src="../../img/json.png" width="40px">
                <strong> RegEx Extract </strong>
-                  <p class="mb-0" id="regex-quote"> Pending </p><p class="font-italic" id="regex-author"></p>
+                  <p class="mb-0" id="regex-quote"> Choose file for quote </p><p class="font-italic" id="regex-author"></p>
                </p>
                <% include partials/messages %>
                <div class="mb-0 input-group">
@@ -54,7 +54,7 @@
                </div>
                <div><br>
                   <button type="submit" id="process" class="btn"> Process Image </button>
-                  <a id="append-ai" class="btn"> Pin </a>
+                  <a id="append-custom" class="btn"> Pin </a>
                </div>
             </div>
          </form>
