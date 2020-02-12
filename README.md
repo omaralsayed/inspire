@@ -11,21 +11,26 @@ Powered by TensorFlow — Google's end-to-end open source platform for machine l
 
 ## Demo 🤓
 
-**Sign In Form**
-
-<img src="media/signin.png" alt="Sign In" width="350">
-
 **Registration Form**
 
 <img src="media/register.png" alt="Registration" width="350">
 
-**Dashboard Image Upload**
+**Sign In Form**
 
-<img src="media/default.png" alt="Pre" width="450">
+<img src="media/signin.png" alt="Sign In" width="350">
 
-**Image Classification Results**
+**File Upload Form (Input)**
 
-<img src="media/probability.png" alt="Post" width="400">
+<img src="media/pre.png" alt="Pre" width="350">
+
+**Image Classification (Output)**
+*Probability is displayed on mouse hover*
+
+<img src="media/post.png" alt="Post" width="350">
+
+**Random Selector**
+
+<img src="media/rand.png" alt="Rand" width="350">
 
 ## Technologies
 
