@@ -39,7 +39,7 @@
                </p>
                <p class="mb-0">
                <img src="../../img/json.png" width="40px">
-               <strong> RegEx Extract </strong>
+               <strong> Regex Extract </strong>
                   <p class="mb-0" id="regex-quote"> Choose file for quote </p><p class="font-italic" id="regex-author"></p>
                </p>
                <% include partials/messages %>
@@ -53,27 +53,42 @@
                   </div>
                </div>
                <div><br>
-                  <button type="submit" id="process" class="btn"> Process Image </button>
+                  <button type="submit" id="process" class="btn"> Send Image </button>
                   <a id="append-custom" class="btn"> Pin </a>
                </div>
             </div>
          </form>
          <h5 id="title-gen"><strong> Random Quote Generator </strong></h5>
          <p class="mb-0" id="quote"></p><p class="font-italic" id="author"></p>
-         <button id="next" class="btn"> Next </button>
+         <button id="next" class="btn"> Next Quote </button>
          <button id="append-random" class="btn"> Pin </button>
+      </div>
+      <div class="container shadow mt-5 ml-auto mr-auto rounded">
+         <h5><strong> Data Table </strong></h5>
          <h5 id="title-pin"></h5>
-         <table class="table table-striped table-bordered" id="pinned-quotes">
+         <br>
+         <table class="table table-striped table-bordered" id="pinned-quotes" class="text-nowrap">
             <thead><tr>
+               <th scope="col"> # </th>
                <th scope="col"> Author </th>
                <th scope="col"> Quote </th>
-               <th scope="col"></th>
+               <th scope="col"> Type </th>
+               <th scope="col"> Sentiment Value </th>
             </tr></thead>
             <tbody id="tbody"></tbody>
          </table>
       </div>
+      <div class="container shadow mt-5 ml-auto mr-auto rounded">
+         <h5><strong> Data Visualization </strong></h5>
+         <h5 id="title-vis"></h5>
+         <p class="mb-0">
+         <canvas id="canvas"></canvas>
+         <br>
+         <canvas id="canvas-1"></canvas>
+      </div>
    </body>
    <% include partials/footer %>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
    <script src="../../src/js/custom.js"></script>
    <script src="../../src/js/random.js"></script>
    <script src="../../src/js/table.js"></script>

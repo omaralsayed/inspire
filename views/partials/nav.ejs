@@ -7,11 +7,23 @@
       <ul class="navbar-nav">
         <% if (user.name) { %> <!-- User view -->
         <li class="nav-item">
-          <a class="nav-link" href="/dashboard"> <i class="fas fa-quote-right"></i><strong> Inspire </strong></a>
+          <a class="nav-link" href="/dashboard"><strong> Inspire </strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#title-pin"> <i class="fas fa-thumbtack"></i><strong> Pinned Quotes </strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#canvas"> <i class="fas fa-chart-area"></i><strong> Data Visualization </strong></a>
         </li>
         <% } else { %> <!-- Guest view -->
         <li class="nav-item">
-          <a class="nav-link" href="/guest"> <i class="fas fa-quote-right"></i><strong> Inspire </strong></a>
+          <a class="nav-link" href="/guest"><strong> Inspire </strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#title-pin"> <i class="fas fa-thumbtack"></i><strong> Pinned Quotes </strong></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#canvas"> <i class="fas fa-chart-area"></i><strong> Data Visualization </strong></a>
         </li>
         <% } %>
       </ul>
