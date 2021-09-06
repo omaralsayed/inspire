@@ -1,8 +1,8 @@
 const express = require('express');
 const mobilenet = require('@tensorflow-models/mobilenet');
 const tfnode = require('@tensorflow/tfjs-node');
-const fs = require('fs');
 const router = express.Router();
+const fs = require('fs');
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
 // GET index
@@ -34,7 +34,7 @@ router.post('/dashboard/upload', (req, res) => {
     const ext = req.files.tfInput.name.split('.')[req.files.tfInput.name.split('.').length - 1];
 
     // Check if the file type is supported
-    if (supportedTypes.indexOf(ext.toLowerCase()) != -1) { // If supported
+    if (supportedTypes.indexOf(ext.toLowerCase()) != -1) {
       const img = req.files.tfInput;
       const name = img.name.split('.');
       const path = 'media/temp.' + name[name.length - 1];
@@ -53,11 +53,10 @@ router.post('/dashboard/upload', (req, res) => {
           // Read the entire content of the file
           const buffer = fs.readFileSync(path);
           /**
-           * Return a 3D or 4D tensor of the decoded image
-           * given the encoded bytes of the uploaded image.
+           * Return a 3D tensor of the decoded image
+           * given encoded bytes of an uploaded file.
            */
-          const tfimage = tfnode.node.decodeImage(buffer);
-          return tfimage;
+          return tfnode.node.decodeImage(buffer, 3);
         }
         
         /**
@@ -67,9 +66,8 @@ router.post('/dashboard/upload', (req, res) => {
          */
         const compile = async path => {
           const image = readImage(path);
-          // Load mobilenet model
+          // Classify image using MobileNet model
           const mobilenetModel = await mobilenet.load();
-          // Classify the image
           predictions = await mobilenetModel.classify(image);
         }
       
@@ -79,7 +77,7 @@ router.post('/dashboard/upload', (req, res) => {
         req.flash('success', 'Image uploaded sucessfully.');
   
         // Redirect
-        if (req.user) { // User view
+        if (req.user) {
           res.redirect('/dashboard');
         } else { // Guest view
           res.redirect('/guest');
@@ -87,21 +85,21 @@ router.post('/dashboard/upload', (req, res) => {
       });  
     } else { // If unsupported
       // Alert user of failure due to unsupported file type
-      req.flash('fail', 'Expected image (BMP, JPEG, JPG, PNG, or GIF), but got unsupported image type.');
+      req.flash('fail', 'Expected image (BMP, JPEG, JPG, PNG, or GIF), but got an unsupported type.');
 
       // Redirect
-      if (req.user) { // User view
+      if (req.user) {
         res.redirect('/dashboard');
       } else { // Guest view
         res.redirect('/guest');
       }
     }
   } else {
-    // Alert user of failure due to not selecting a file
+    // Alert user of failure with selecting a file
     req.flash('fail', 'No file selected.');
 
     // Redirect
-    if (req.user) { // User view
+    if (req.user) {
       res.redirect('/dashboard');
     } else { // Guest view
       res.redirect('/guest');
