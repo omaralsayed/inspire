@@ -1,11 +1,6 @@
 # Inspire
 
-Inspire is a quote generator that allows you to pin your favorite quotes. The Node.js application uses Passport, EJS, and Tensorflow.js.
-
-You can do the following:
-
-+ Upload an image to get a relevant quote
-+ Get a random quote from 5000+ curated quotes
+Inspire is a Node.js application for captioning images using natural language processing and computer vision (using TensorFlow.js backend). In addition to captioning, Inspire allows generating random quotes. Users may "pin" their favorite quotes to access them later. Pinned quotes undergo text analysis pipelines for user behavior analysis and visualization purposes (i.e. sentiment analysis as a time series).
 
 ## Quick Start 🚀
 
@@ -25,4 +20,4 @@ nodemon app.js # deploy on http://127.1.0.1/
 
 ## License
 
-Licensed under the MIT License.
+Licensed under the (MIT License)[https://github.com/omaralsayed/inspire/blob/master/LICENSE].
