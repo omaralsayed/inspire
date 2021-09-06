@@ -20,4 +20,4 @@ nodemon app.js # deploy on http://127.1.0.1/
 
 ## License
 
-Licensed under the (MIT License)[https://github.com/omaralsayed/inspire/blob/master/LICENSE].
+Licensed under the [MIT License](https://github.com/omaralsayed/inspire/blob/master/LICENSE).
