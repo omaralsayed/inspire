@@ -10,13 +10,13 @@
          <h2> <strong> Dashboard </strong> </h2>
          <div class="alert alert-success" id="alert" role="alert">
             <% if (user.name) { %>
-            <h4 class="alert-heading"> Hello there, <%= user.name %>! </h4> <!-- User view -->
-            <% } else { %>
-            <h4 class="alert-heading"> Hello there, <%= user %>! </h4> <!-- Guest view -->
+            <h4 class="alert-heading"> <%= user.name %>'s Dashboard </h4>
+            <% } else { %> <!-- Guest view -->
+            <h4 class="alert-heading"> <%= user %> Dashboard </h4>
             <% } %>
             <p> Welcome to Inspire, a place where you can find and pin quotes that you like. </p>
             <hr>
-            <p class="mb-0"> To view the source code or contribute to this project, visit <a target="_blank" href="https://github.com/omaralsayed/inspire"><strong>Inspire</strong></a>. </p>
+            <p class="mb-0"> Found an issue or interested in a new feature? Open Issue or PR on <a target="_blank" href="https://github.com/omaralsayed/inspire"><strong>GitHub</strong></a>. </p>
          </div>
          <form id="contact-form" method="post" action="/dashboard/upload" role="form" encType="multipart/form-data">
             <div class="controls">
@@ -89,8 +89,8 @@
    </body>
    <% include partials/footer %>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-   <script src="../../src/js/custom.js"></script>
-   <script src="../../src/js/random.js"></script>
-   <script src="../../src/js/table.js"></script>
-   <script src="../../src/js/addons.js"></script>
+   <script src="../../src/javascript/custom.js"></script>
+   <script src="../../src/javascript/random.js"></script>
+   <script src="../../src/javascript/table.js"></script>
+   <script src="../../src/javascript/addons.js"></script>
 </html>

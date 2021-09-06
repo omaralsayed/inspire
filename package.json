@@ -1,8 +1,7 @@
 {
   "name": "inspire",
-  "version": "1.0.0",
-  "description": "web application",
-  "main": "app.js",
+  "version": "0.0.1",
+  "main": "server.js",
   "scripts": {
     "start": "npm run dev",
     "test": "npm run test"
@@ -10,20 +9,23 @@
   "author": "Omar Alsayed",
   "license": "MIT",
   "dependencies": {
-    "@tensorflow-models/mobilenet": "^2.0.4",
-    "@tensorflow/tfjs": "^1.2.10",
-    "@tensorflow/tfjs-node": "^1.2.10",
+    "@tensorflow-models/mobilenet": "^2.1.0",
+    "@tensorflow/tfjs": "^1.7.4",
+    "@tensorflow/tfjs-node": "^1.7.4",
+    "apos-to-lex-form": "^1.0.5",
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "express-fileupload": "^1.1.6",
-    "express-session": "^1.17.0",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
     "fs": "0.0.1-security",
-    "mongoose": "^5.7.5",
-    "nodemon": "^2.0.2",
+    "mongoose": "^5.13.9",
+    "natural": "^5.1.0",
+    "nodemon": "^2.0.12",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "password-validator": "^5.1.1",
+    "stopword": "^1.0.11"
   }
 }
